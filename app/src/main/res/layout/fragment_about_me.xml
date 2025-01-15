@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navyblue">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/yourNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="0dp">
+
+            <!--About me section-->
+
+            <!--Timeline-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingStart="0dp"
+                android:paddingTop="16dp"
+                android:paddingEnd="0dp"
+                android:paddingBottom="16dp">
+
+                <!--About me header-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:fontFamily="@font/sfheavy"
+                    android:text="About Me"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/image_profile"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/pp" />
+
+                <!-- Introduction Section -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="50dp"
+                    android:paddingEnd="50dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="100dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/sfmed"
+                        android:text="--Hello!"
+                        android:textColor="@color/white"
+                        android:textSize="22sp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfmed"
+                            android:text="I am"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/sfmeditalic"
+                            android:text=" Irfan Haqim"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+                    </LinearLayout>
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="8dp"-->
+<!--                        android:layout_marginBottom="8dp"-->
+<!--                        android:fontFamily="@font/sfmed"-->
+<!--                        android:text="Student ID: 2023126207"-->
+<!--                        android:textColor="@color/white"-->
+<!--                        android:textSize="18sp" />-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/sfmed"
+                        android:text="Bachelor of Multimedia Computing"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/sfmed"
+                        android:text="I am a science computer student of UiTM Shah Alam, Selangor. I'm proficient in several programming languages and systems. I am eager to learn some valuable skills and real-life work. I love to work with designing and multimedia-related things such as front-end in web development."
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/btnDownloadCV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black"
+                        android:padding="12dp"
+                        android:text="See my CV!"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/nextSection"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Study Timeline Section -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Study Timeline"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:padding="12dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/sfbold"/>
+
+                <!-- Study Place 1 Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Image on the left side -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/logoskbr"
+                            android:scaleType="fitXY"
+                            android:layout_marginRight="16dp"/>
+
+                        <!-- Text views on the right side -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Study place name -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SK Bukit Rimau"
+                                android:textSize="18sp"
+                                android:textColor="#555555"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfheavy"/>
+
+                            <!-- Duration -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2009 - 2014"
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+
+                            <!-- Description -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Starting at SK Bukit Rimau was really important.
+                                The school had fun classes and teachers who cared.
+                                I loved learning there, with cool subjects and activities outside of regular classes."
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <!-- Connecting Vertical Line -->
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Study Place 2 Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Image on the left side -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/logosmkkk"
+                            android:scaleType="fitXY"
+                            android:layout_marginRight="16dp"/>
+
+                        <!-- Text views on the right side -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Study place name -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="SMK Kota Kemuning"
+                                android:textSize="18sp"
+                                android:textColor="#555555"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfheavy"/>
+
+                            <!-- Duration -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2015 - 2019"
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+
+                            <!-- Description -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Continuing from SMK Kota Kemuning, my education moved forward. The school taught me important values and provided experiences that have shaped my journey."
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Connecting Vertical Line -->
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Study Place 3 Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Image on the left side -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/logouitm"
+                            android:scaleType="fitXY"
+                            android:layout_marginRight="16dp"/>
+
+                        <!-- Text views on the right side -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Study place name -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="UiTM Segamat, Johor"
+                                android:textSize="18sp"
+                                android:textColor="#555555"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfheavy"/>
+
+                            <!-- Duration -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2020 - 2023"
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+
+                            <!-- Description -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Moving on to UiTM Segamat, I'm eager for what comes next. With great guidance and chances to learn. I pursue Diploma in Computer Science"
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Connecting Vertical Line -->
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <!-- Study Place 4 Card -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    app:cardCornerRadius="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <!-- Image on the left side -->
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:src="@drawable/logouitm"
+                            android:scaleType="fitXY"
+                            android:layout_marginRight="16dp"/>
+
+                        <!-- Text views on the right side -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <!-- Study place name -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="UiTM Shah Alam, Selangor"
+                                android:textSize="18sp"
+                                android:textColor="#555555"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfheavy"/>
+
+                            <!-- Duration -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2023 - Now"
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+
+                            <!-- Description -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Right now, I'm doing well at UiTM Shah Alam. It's a lively place full of knowledge. With great resources and lots of different students, I'm getting better at what I'm studying."
+                                android:textSize="16sp"
+                                android:textColor="#777777"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/sfmed"/>
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"
+                android:text="Get in touch" />
+
+            <!-- Social media links -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/instagramImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/instagram"
+                    android:clickable="true"
+                    android:onClick="openInstagramLink"/>
+
+                <ImageView
+                    android:id="@+id/linkedinImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/linkedin"
+                    android:clickable="true"
+                    android:onClick="openLinkedInLink"/>
+
+                <ImageView
+                    android:id="@+id/facebookImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/facebook"
+                    android:clickable="true"
+                    android:onClick="openFacebookLink"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- WebView for opening links -->
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

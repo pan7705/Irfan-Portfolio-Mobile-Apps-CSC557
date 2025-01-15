@@ -1,0 +1,65 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_about_me"
+            android:icon="@drawable/about"
+            android:title="About"/>
+        <item
+            android:id="@+id/nav_hobby"
+            android:icon="@drawable/hobby"
+            android:title="Hobby"/>
+        <item
+            android:id="@+id/nav_skills"
+            android:icon="@drawable/skill"
+            android:title="Skills"/>
+        <item
+            android:id="@+id/nav_timetable"
+            android:icon="@drawable/timetable"
+            android:title="Timetable"/>
+
+        <item
+            android:id="@+id/nav_links"
+            android:icon="@drawable/link"
+            android:title="Links">
+            <menu>
+                <item
+                    android:id="@+id/nav_uitm"
+                    android:title="UiTM"
+                    android:icon="@drawable/logouitm" />
+                <item
+                    android:id="@+id/nav_student_portal"
+                    android:title="Student Portal"
+                    android:icon="@drawable/studportal" />
+            </menu>
+        </item>
+
+<!--        <item-->
+<!--            android:id="@+id/nav_links"-->
+<!--            android:icon="@drawable/link"-->
+<!--            android:title="Links">-->
+<!--            <menu>-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_uitm"-->
+<!--                    android:title="UiTM"-->
+<!--                    android:icon="@drawable/logouitm" />-->
+<!--                <item-->
+<!--                    android:id="@+id/nav_student_portal"-->
+<!--                    android:title="Student Portal"-->
+<!--                    android:icon="@drawable/studportal" />-->
+<!--            </menu>-->
+<!--        </item>-->
+
+        <item
+            android:id="@+id/nav_exit"
+            android:title="Exit"
+            android:icon="@drawable/exitbtn"/>
+    </group>
+</menu>

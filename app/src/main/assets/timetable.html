@@ -1,0 +1,278 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Responsive Web page</title>
+            <style>
+                body {
+                    font-family: 'Arial', sans-serif;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .header {
+                    text-align: center;
+                    font-size: 1.5em;
+                    margin-bottom: 20px;
+                }
+
+                .jadual {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    padding: 20px; 
+                }
+
+                table {
+                    background-color: #CCC8AA;
+                    width: 50%;
+                    text-align: center;
+                    font-weight: bold;
+                    font-family: arial;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+
+                table, th, td {
+                    border: 1px solid #555;
+                }
+
+                th, td {
+                    padding: 10px;
+                    height: 50px;
+                }
+
+                a:hover {
+                    color: red;
+                    opacity: 0.6;
+                    transition: 0.18s;
+                }
+
+                .info {
+                    text-align: center;
+                    display: none;
+                    background-color: #f9f9f9;
+                    border: 1px solid #ddd;
+                    padding: 10px;
+                    box-sizing: border-box; 
+                    width: 100%; 
+                    margin-top: 20px; 
+                }
+
+                .info h1 {
+                    font-size: 1.2em;
+                    margin-bottom: 10px;
+                    text-decoration: underline;
+                }
+
+                .info ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .info li {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+
+                /* For mobile phones: */
+                @media only screen and (max-width: 320px) {
+                    table {
+                        width: 100%; /* Set width to 100% for screens <= 320px */
+                    }
+
+                    table, th, td {
+                        font-size: 0.8em;
+                    }
+                }
+
+                /* For mobile M phones: */
+                @media only screen and (min-width: 321px) and (max-width: 375px) {
+
+                    table{
+                        background-color: blue;
+                        width: 100%;
+                    }
+                }
+
+                /* For mobile L phones: */
+                @media only screen and (min-width: 376px) and (max-width: 425px) {
+
+                    table{
+                        width: 100%;
+                    }
+                }
+
+                /* For tablets: */
+                @media only screen and (min-width: 426px) and (max-width: 768px) {
+                    .info {
+                    position: static; /* Static positioning for smaller screens */
+                    width: auto;
+                    }   
+                }
+            </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            var infoContainer = document.querySelector('.info');
+            var subjectName = document.getElementById('subject-name');
+            var lectName = document.getElementById('lect-name');
+            var email = document.getElementById('email');
+
+            var links = document.querySelectorAll('a');
+            var subjectData = {
+                csc508: {
+                    subjectName: 'Data Structure',
+                    lectName: 'Dr. Syed Mohd Zahid bin Syed Zainal Ariffin',
+                    email: 'zahidzainal@uitm.edu.my'
+                },
+                csc541: {
+                    subjectName: 'Programming Interactive Systems',
+                    lectName: 'Dr Suzanna binti Ahmad',
+                    email: 'suzana235@uitm.edu.my'
+                },
+                csc557: {
+                    subjectName: 'Mobile Programming',
+                    lectName: 'Azizian bin Mohd Sapawi / Hana Fakhira binti Almarzuki',
+                    email: 'azizian@uitm.edu.my / hanafakhira@uitm.edu.my'
+                },
+                csc577: {
+                    subjectName: 'Software Engineering',
+                    lectName: 'Dr. Wan Ya bin Wan Hussin',
+                    email: 'wanya@uitm.edu.my'
+                },
+                csc584: {
+                    subjectName: 'Enterprise Programming',
+                    lectName: 'DR. Muhammad Izzad bin Ramli',
+                    email: 'izzadramli@uitm.edu.my'
+                },
+                ctu554: {
+                    subjectName: 'Values and Civilization II',
+                    lectName: 'TBC',
+                    email: 'TBC'
+                },
+                elc650: {
+                    subjectName: 'English for Professional Interaction',
+                    lectName: 'Sofea Azlena Tung binti Adib Vincent Tung',
+                    email: 'sofeaazlena@uitm.edu.my'
+                },
+                tac451: {
+                    subjectName: 'Introductory Arabic (Level II)',
+                    lectName: 'Ainaa Mardhiah binti Zaharuddin',
+                    email: 'ainaamardhiah@uitm.edu.my'
+                },
+            };
+
+            links.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Prevent the default link behavior
+                    var subjectCode = link.getAttribute('data-subject-code');
+                    var subjectInfo = getSubjectInfo(subjectCode);
+                    displayInfo(subjectInfo);
+                });
+            });
+
+            function getSubjectInfo(subjectCode) {
+                // Retrieve subject information based on the subject code
+                return subjectData[subjectCode] || {};
+            }
+
+            function displayInfo(subjectInfo) {
+                subjectName.textContent = 'Subject Name: ' + subjectInfo.subjectName;
+                lectName.textContent = 'Lecturer Name: ' + subjectInfo.lectName;
+                email.textContent = 'Email: ' + subjectInfo.email;
+
+                infoContainer.style.display = 'block'; // Show the information container
+            }
+        });
+
+        </script>
+        </head>
+        
+        <body>
+            <h1 class="header">CDCS2534A Timetable</h1>
+                <div class="jadual">
+                    <table border='1'>
+                        <tr style="height: 50px">
+                            <td>Time / Day</td>
+                            <td>Monday</td>
+                            <td>Tuesday</td>
+                            <td>Wednesday</td>
+                            <td>Thursday</td>
+                            <td>Friday</td>
+                        </tr>
+                        
+                        <tr>
+                            <td style="height: 50px">8</td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc508">CSC508</a></td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc557">CSC557</td>
+                            <td rowspan="2"><a href="#" data-subject-code="elc650">ELC650</td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc577">CSC577</td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc577">CSC577</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">9</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">10</td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc584">CSC584</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc557">CSC557</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc508">CSC508</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">11</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">12</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc584">CSC584</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">1</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">2</td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc541">CSC541</td>
+                            <td rowspan="2"><a href="#" data-subject-code="tac451">TAC451</td>
+                            <td rowspan="2"><a href="#" data-subject-code="csc541">CSC541</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">3</td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">4</td>
+                            <td rowspan="2"><a href="#" data-subject-code="ctu554">CTU554</td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                            <td rowspan="2"></td>
+                        </tr>
+                        <tr>
+                            <td style="height: 50px">5</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="info">
+                    <h1>Subject information</h1>
+                    <ul>
+                        <li><p id="subject-name"></p></li>
+                        <li><p id="lect-name"></p></li>
+                        <li><p id="email"></p></li>
+                    </ul>
+                </div>
+        </body>
+    </html>

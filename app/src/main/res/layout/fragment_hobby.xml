@@ -1,0 +1,342 @@
+<!-- Updated fragment_hobby.xml with grouped section -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/navyblue">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Cycling Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:paddingTop="16dp"
+                app:cardCornerRadius="16dp"
+
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:id="@+id/image_cycling"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/crituitm"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnCyclingPrevious"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Previous"
+                            android:backgroundTint="@color/black"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="8dp"
+                            android:fontFamily="@font/sfmed"/>
+
+                        <Button
+                            android:id="@+id/btnCyclingNext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Next"
+                            android:backgroundTint="@color/black"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="8dp"
+                            android:fontFamily="@font/sfmed"/>
+                    </LinearLayout>
+
+
+                    <!-- Section: Text Views -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Cycling"
+                        android:textSize="28sp"
+                        android:textColor="#555555"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Cycling is a fantastic hobby that allows me to stay active and explore the outdoors. I enjoy the freedom and exhilaration of riding my bike, whether it's for leisure, commuting, or participating in cycling events. It's a great way to stay fit, clear my mind, and connect with nature."
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+        <!-- Music Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:id="@+id/image_music"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/a7x"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="16dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnMusicPrevious"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Previous"
+                            android:backgroundTint="@color/black"
+                            android:textColor="@color/white"
+                            android:layout_marginRight="8dp"/>
+
+                        <Button
+                            android:id="@+id/btnMusicNext"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Next"
+                            android:backgroundTint="@color/black"
+                            android:textColor="@color/white"
+                            android:layout_marginLeft="8dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Listen to Music"
+                        android:textSize="28sp"
+                        android:textColor="#555555"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="I like to listen to music in my free time. Sometimes, I listen to music to increase my enthusiasm and motivation when I want to do something."
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Favorite Bands"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:paddingTop="16dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\u2022 Avenged Sevenfold"
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\u2022 The Strokes"
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="\u2022 The Symposium"
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/sfmed"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Interest"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:paddingTop="16dp"
+            android:fontFamily="@font/sfheavy"/>
+
+        <!-- Front-End Development Section -->
+        <!-- Front-End Development Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                android:backgroundTint="@color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <!-- Video View -->
+                    <!-- Video Embed (Replace with your YouTube video ID) -->
+                    <WebView
+                        android:id="@+id/webViewFrontendVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="8dp"/>
+
+                    <!-- Section: Text Views -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Front-End Development"
+                        android:textSize="28sp"
+                        android:textColor="#555555"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Ever since I started my computer science diploma, I noticed I really liked Front-End Development, especially in my fourth semester. It all began when I was learning Web Development in the CSC264 course (Introduction to Web and Mobile Application). I found it fun and easier to grasp compared to my other subjects.\n\nFrom then, I'm particularly interested in things that involve multimedia elements, and this interest led me to pursue a Bachelor's degree in the Multimedia Computing program."
+                        android:textSize="16sp"
+                        android:textColor="#777777"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:fontFamily="@font/sfmed"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+
+
+        <!--Social media links-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingTop="16dp"
+                android:paddingBottom="4dp"
+                android:text="Get in touch" />
+
+            <!-- Social media links -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="16dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:id="@+id/facebookImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/facebook"
+                    android:clickable="true"
+                    android:onClick="openFacebookLink"/>
+
+                <ImageView
+                    android:id="@+id/instagramImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/instagram"
+                    android:clickable="true"
+                    android:onClick="openInstagramLink"/>
+
+                <ImageView
+                    android:id="@+id/linkedinImageView"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/linkedin"
+                    android:clickable="true"
+                    android:onClick="openLinkedInLink"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #f2f2f2;
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+            }
+
+            table {
+                margin-top: 20px;
+                border-collapse: collapse;
+                border: 2px solid #000; 
+                width: 100%;
+                height: 96vh;
+            }
+
+            th, td {
+                border: 2px solid #000;
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            th {
+                background-color: #000; 
+                color: #ffffff; 
+            }
+
+            .info-container {
+                background-color: #ffffff;
+                border: 2px solid #000;
+                padding: 20px;
+                margin-top: 20px;
+                display: block;
+            }
+
+            .info-container h2 {
+                color: #000;
+                margin-bottom: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+        </style>
+        <title>Class Timetable</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <table class="table text-center">
+                <thead class="bg-success text-white">
+                    <tr>
+                        <th scope="col">Time/Day</th>
+                        <th scope="col">Monday</th>
+                        <th scope="col">Tuesday</th>
+                        <th scope="col">Wednesday</th>
+                        <th scope="col">Thursday</th>
+                        <th scope="col">Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8:00</td>
+                        <td rowspan="2"><a href="#" id="csc508">CSC508</a></td>
+                        <td rowspan="2"><a href="#" id="csc557">CSC557</a></td>
+                        <td rowspan="2"><a href="#" id="elc650">ELC650</a></td>
+                        <td rowspan="2"><a href="#" id="csc557">CSC557</a></td>
+                        <td rowspan="2"><a href="#" id="csc557">CSC557</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>9:00</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>10:00</td>
+                        <td rowspan="2"><a href="#" id="csc584">CSC584</a></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"><a href="#" id="csc557">CSC557</a></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"><a href="#" id="csc508">CSC508</a></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>11:00</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>12:00</td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"><a href="#" id="csc584">CSC584</a></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>1:00</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>2:00</td>
+                        <td rowspan="2"><a href="#" id="csc541">CSC541</a></td>
+                        <td rowspan="2"><a href="#" id="tac451">TAC451</a></td>
+                        <td rowspan="2"><a href="#" id="csc541">CSC541</a></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>3:00</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>4:00</td>
+                        <td rowspan="2"><a href="#" id="ctu554">CTU554</a></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                        <td rowspan="2"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>5:00</td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            <!-- New container for subject information -->
+            <div class="info-container" id="subject-info">
+                <h2>Subject Information</h2>
+                <p><strong>Subject Name:</strong> <span id="subject-name"></span></p>
+                <p><strong>Lecturer Name:</strong> <span id="lecturer-name"></span></p>
+                <p><strong>Lecturer Email:</strong> <span id="lecturer-email"></span></p>
+                <p><strong>Class venue:</strong> <span id="class"></span></p>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var infoContainer = document.getElementById('subject-info');
+                var subjectNameElement = document.getElementById('subject-name');
+                var lecturerNameElement = document.getElementById('lecturer-name');
+                var lecturerEmailElement = document.getElementById('lecturer-email');
+                var classElement = document.getElementById('class');
+        
+                var subjectInfoData = {
+                    csc508: {
+                        subjectName: 'Data Structure',
+                        lecturerName: 'Dr. Syed Mohd Zahid bin Syed Zainal Ariffin',
+                        lecturerEmail: 'zahidzainal@uitm.edu.my',
+                        class: 'MK15'
+                    },
+                    csc584: {
+                        subjectName: 'Enterprise Programming',
+                        lecturerName: 'Dr. Muhammad Izzad bin Ramli',
+                        lecturerEmail: 'izzadramli@uitm.edu.my',
+                        class: 'MK15'
+                    },
+                    elc650: {
+                        subjectName: 'English for Professional Interaction',
+                        lecturerName: 'Sofea Azlena Tung binti Adib Vincent Tung',
+                        lecturerEmail: 'sofeaazlena@uitm.edu.my',
+                        class: 'Online'
+                    },
+                    csc541: {
+                        subjectName: 'Programming Interactive Systems',
+                        lecturerName: 'Dr Suzanna binti Ahmad',
+                        lecturerEmail: 'suzana235@uitm.edu.my',
+                        class: 'MK19'
+                    },
+                    ctu554: {
+                        subjectName: 'Values and Civilization II',
+                        lecturerName: 'Anis Pauzi',
+                        lecturerEmail: 'TBC',
+                        class: 'BK09'
+                    },
+                    // Add entries for other subjects with correct property names
+                };
+        
+                // Function to display subject information
+                function displaySubjectInfo(subjectCode) {
+                    var subjectInfo = subjectInfoData[subjectCode];
+        
+                    if (subjectInfo) {
+                        subjectNameElement.textContent = subjectInfo.subjectName;
+                        lecturerNameElement.textContent = subjectInfo.lecturerName;
+                        lecturerEmailElement.textContent = subjectInfo.lecturerEmail;
+                        classElement.textContent = subjectInfo.class;
+        
+                        infoContainer.style.display = 'block';
+                    }
+                }
+        
+                // Add event listeners for all subjects dynamically
+                var subjects = document.querySelectorAll('tbody a');
+                subjects.forEach(function (subject) {
+                    subject.addEventListener('click', function () {
+                        var subjectCode = subject.id;
+                        displaySubjectInfo(subjectCode);
+                    });
+                });
+            });
+        </script>
+        
+        
+    
+    </body>
+</html>
